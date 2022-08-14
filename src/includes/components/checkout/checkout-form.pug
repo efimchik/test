@@ -1,0 +1,14 @@
+form.js-form(action="" novalidate)
+    .form-area
+        .form-area__line
+            .form-area__line-box.front-layer.js-animate
+                +customSelect('Выберите тип системы', selectOptions)
+            .form-area__line-box.js-animate
+                +inputText(checkoutMail)
+            .form-area__line-box.js-animate
+                +inputText(checkoutName)
+            .form-area__line-box.order-upload.js-animate
+                +download()
+            .form-area__line-box.middle.js-animate
+                +inputRange()
+        +btn(btnCheckoutSubmit)

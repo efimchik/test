@@ -1,0 +1,10 @@
+mixin customSelect(selected, options)
+    .dropdown
+        button(type="button").dropdown__button= selected
+            .dropdown__arrow
+                .dropdown__arrow-item.dropdown__arrow-item--left
+                .dropdown__arrow-item.dropdown__arrow-item--right
+        ul.dropdown__list.scroll-inside
+            each option in options
+                li.dropdown__list-item( data-value= option.value)= option.title
+        input.dropdown__input-hidden(type="hidden" name="select-category" value="")

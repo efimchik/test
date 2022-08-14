@@ -1,0 +1,8 @@
+include data
+
+
+nav.main-menu
+    ul.main-menu__list
+        each item in mainMenu
+            li.main-menu__list-item
+                a.main-menu__list-link(href= item.link)= item.title

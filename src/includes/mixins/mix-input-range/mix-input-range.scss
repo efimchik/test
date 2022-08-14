@@ -1,0 +1,69 @@
+.field {
+    &__container {
+        &-range {
+            width: 100%;
+            height: 48px;
+            display: flex;
+            flex-wrap: wrap;
+            font-weight: 700;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+    }
+
+    .range-slider {
+        width: 40px;
+        height: 40px;
+    }
+
+    &__range {
+        padding: 0;
+        width: 100%;
+        height: 6px;
+        display: block;
+        align-self: flex-end;
+        position: relative;
+        appearance: none;
+        background-color: transparent;
+        box-shadow: 0 0 0 6px rgba($field-first-bg, 0.7) inset;
+        border: 1px solid $border-color-third;
+        border-radius: 3px;
+        box-sizing: border-box;
+
+        &:focus {
+            outline: transparent;
+        }
+
+        &-label {
+            width: calc(100% - 60px);
+            display: block;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+
+        }
+
+        &-data {
+            width: 60px;
+            color: rgba($text-color-secondary, 0.85);
+            text-align: right;
+        }
+    }
+}
+
+
+
+input[type=range]::-webkit-slider-thumb {
+    width:24px;
+    height: 24px;
+    background-color: $btn-secondary-bg;
+    border: 3px solid $border-color-second;
+    border-radius: 50%;
+    appearance: none;
+    cursor: pointer;
+    transition: background $transition-base;
+
+    &:hover {
+        background-color: $border-color-second;
+    }
+}

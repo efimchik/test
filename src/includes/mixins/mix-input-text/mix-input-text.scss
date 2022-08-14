@@ -1,0 +1,23 @@
+.field {
+    &:focus + label,
+    &:not(:placeholder-shown) + label {
+        transform: translateY(-200%)
+    }
+
+    &__container {
+        position: relative;
+
+        .error {
+            border-color: $field-error-border;
+        }
+
+        .label {
+            margin-top: -11px;
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            color: $field-color-primary;
+            transition: all 200ms;
+        }
+    }
+}

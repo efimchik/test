@@ -1,0 +1,10 @@
+include data
+
+
+.pay-list
+    each item in payList
+        .pay-list__item
+            a.pay-list__item-link(href= item.link, target="__blank")
+                span.pay-list__item-icn
+                    img(src="./img/" + item.icnUrl, alt= item.title)
+                span.pay-list__item-title= item.title

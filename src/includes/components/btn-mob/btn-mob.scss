@@ -1,0 +1,50 @@
+.btn-mob {
+    width: 60px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-50%);
+
+    @media(max-width: 768px) {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .ham1 {
+        width: 100%;
+        -webkit-tap-highlight-color: transparent;
+        transition: transform 400ms;
+        user-select: none;
+        cursor: pointer;
+
+        path{
+            fill: none;
+            stroke: #337AB7;
+            stroke-width: 5.5;
+            stroke-linecap: round;
+            transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+        }
+
+        &.active {
+            transform: rotate(45deg);
+
+            .top {
+                stroke-dashoffset: -98px;
+            }
+
+            .bottom {
+                stroke-dashoffset: -138px;
+            }
+        }
+
+        .top {
+            stroke-dasharray: 40 139;
+        }
+
+        .bottom {
+            stroke-dasharray: 40 180;
+        }
+    }
+}

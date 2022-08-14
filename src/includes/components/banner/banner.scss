@@ -1,0 +1,100 @@
+.banner {
+    padding-top: 100px;
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    line-height: 24px;
+    font-size: 20px;
+    position: relative;
+    background: url('./../img/banner.jpg') no-repeat right top;
+    background-size: cover;
+    box-sizing: border-box;
+
+    @media(max-width: 768px) {
+        padding-top: 64px;
+        background: url('./../img/banner-mob.jpg') no-repeat right top;
+        background-size: cover;
+    }
+
+    h1 {
+        margin-bottom: 90px;
+        opacity: 0;
+        text-transform: uppercase;
+        transform: translateX(-50%);
+        transition: transform $transition-base, opacity $transition-base;
+
+        @media(max-width: 1024px) {
+            margin-bottom: 40px;
+        }
+
+        &.animation {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    &__desc {
+        margin-bottom: 10px;
+        font-weight: 800;
+        opacity: 0;
+        transform: translateX(-50%);
+        transition:
+            transform $transition-base ($transition-base / 2),
+            opacity $transition-base ($transition-base / 2);
+
+        &.animation {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    &__list {
+        margin-left: 15px;
+        opacity: 0;
+        transition: opacity $transition-base ($transition-base*2);
+
+        &.animation {
+            opacity: 1;
+        }
+
+        &-item {
+            margin-top: 5px;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+
+    .center {
+        padding: 50px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .btn {
+        &__wrap {
+            margin-top: 80px;
+            opacity: 0;
+            transform: translateY(50%);
+            transition:
+                transform $transition-base ($transition-base*3),
+                opacity $transition-base ($transition-base*3);
+
+            &.animation {
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+            @media(max-width: 1024px) {
+                margin-top: 40px;
+            }
+        }
+
+        &--blue {
+            margin-right: 30px;
+        }
+    }
+}

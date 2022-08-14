@@ -1,0 +1,6 @@
+.steps
+    each item in steps
+        .steps__item.js-animate
+            .steps__item-icn
+                img(src='./img/' + item.icn, alt= item.title)
+            .steps__item-title= item.title

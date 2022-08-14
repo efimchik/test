@@ -1,0 +1,9 @@
+include data
+
+
+.contact-links
+    each item in contactLinks
+        a(href= item.link, target= item.blank ? '__blank' : false).contact-links__link
+            span.contact-links__link-icn
+                img(src="./img/" + item.icnUrl, alt= item.title)
+            span.contact-links__link-title= item.title

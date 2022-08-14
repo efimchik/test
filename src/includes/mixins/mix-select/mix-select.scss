@@ -1,0 +1,127 @@
+.dropdown {
+    width: 100%;
+    height: 48px;
+    color: $field-color-primary;
+    position: relative;
+    z-index: 2;
+
+    &__button {
+        margin: 0;
+        padding: 0 26px 0 10px;
+        width: 100%;
+        height: 100%;
+        font-family: "Lato", sans-serif;
+        line-height: 22px;
+        font-size: 18px;
+        text-align: left;
+        position: relative;
+        background-color: rgba($field-first-bg, 0.85);
+        border: 1px solid $border-color-third;
+        border-radius: 4px;
+        box-sizing: border-box;
+        cursor: pointer;
+        transition: all $transition-base;
+
+        &--active {
+            color: $text-color-secondary;
+            background-color: rgba($third-bg, 0.85);
+            border: 1px solid $border-color-fours;
+            border-bottom: 1px solid transparent;
+
+            .dropdown__arrow-item {
+                &--left {
+                    &:after {
+                        background-color: $border-color-secondary;
+                        transform-origin: center center;
+                        transform: rotate(-90deg);
+                    }
+                }
+
+                &--right {
+                    &:after {
+                        background-color: $border-color-secondary;
+                        transform-origin: center center;
+                        transform: rotate(90deg);
+                    }
+                }
+            }
+        }
+    }
+
+    &__list {
+        padding: 10px;
+        width: 100%;
+        height: 200px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        color: $text-color-secondary;
+        opacity: 0;
+        visibility: hidden;
+        background-color: $primary-bg;
+        border: 1px solid $border-color-fours;
+        border-top: 0;
+        box-sizing: border-box;
+        transform: translateY(50px);
+        transition: transform $transition-base, opacity $transition-base;
+
+        &--visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        &-item {
+            line-height: 34px;
+            cursor: pointer;
+            transition: color $transition-base;
+
+            &:hover {
+                color: $text-color-fours;
+            }
+
+            &.selected {
+                color: $text-color-fours;
+            }
+        }
+    }
+
+    &__arrow {
+        margin-top: -1px;
+        width: 14px;
+        height: 8px;
+        position: absolute;
+        right: 6px;
+        top: 50%;
+
+        &-item {
+            &--left,
+            &--right {
+                width: 9px;
+                height: 2px;
+                display: block;
+                position: absolute;
+                top: 2px;
+
+                &:after {
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                    background-color: $border-color-arrow;
+                    transition: all 0.5s cubic-bezier(0.25, 1.7, 0.35, 0.8);
+                }
+            }
+
+            &--left {
+                left: 0;
+                transform: rotate(45deg);
+            }
+
+            &--right {
+                left: 6px;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}

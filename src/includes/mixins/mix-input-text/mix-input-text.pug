@@ -1,0 +1,13 @@
+mixin inputText(params)
+    .field__container
+        input(
+            id= params.id,
+            class= params.className,
+            type= params.type,
+            name= params.fieldName,
+            value= params.value,
+            placeholder= params.placeholder,
+            disabled= params.disabled,
+            required= params.required ? '' : false
+        )
+        label(for= params.id, class="label")= params.label

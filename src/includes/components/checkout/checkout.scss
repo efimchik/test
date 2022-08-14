@@ -1,0 +1,51 @@
+.checkout {
+    width: 100%;
+    color: $text-color-secondary;
+    background: $primary-bg url('./../img/map.png') no-repeat center top;
+    background-size: contain;
+
+    @media(max-width: 1024px) {
+        background-size: 150% auto;
+    }
+
+    @media(max-width: 1024px) {
+        background-size: 200% auto;
+    }
+
+    h2 {
+        margin-bottom: 30px;
+        text-align: center;
+        text-transform: uppercase;
+        opacity: 0;
+        transform: translateX(-50%);
+        transition: transform $transition-base, opacity $transition-base;
+
+        &.animation {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    &__desc {
+        margin-bottom: 80px;
+        line-height: 22px;
+        font-size: 18px;
+        text-align: center;
+        opacity: 0;
+        transform: translateX(50%);
+        transition: transform $transition-base, opacity $transition-base;
+
+        &.animation {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .center {
+        padding: 115px 20px 150px;
+
+        @media(max-width: 1024px) {
+            padding: 60px 20px 70px;
+        }
+    }
+}

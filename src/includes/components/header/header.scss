@@ -1,0 +1,37 @@
+.header {
+    width: 100%;
+    color: $text-color-secondary;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background-color: rgba($secondary-bg, 0.9);
+
+    .center {
+        padding: 33px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+
+        @media(max-width: 768px) {
+            padding: 18px 20px;
+        }
+    }
+
+    .logo {
+        line-height: 33px;
+        font-size: 28px;
+        font-weight: 900;
+        text-transform: uppercase;
+
+        @media(max-width: 768px) {
+            line-height: 28px;
+            font-size: 20px;
+        }
+
+        span {
+            color: $text-color-fours;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+@import "./../../includes/core/color-vars";
+@import "./../../includes/core/reset";
+@import "./../../includes/core/core";
+
+
+@import "./../../includes/mixins/mix-btn/mix-btns";
+@import "./../../includes/mixins/mix-input-text/mix-input-text";
+@import "./../../includes/mixins/mix-select/mix-select";
+@import "./../../includes/mixins/mix-upload/mix-upload";
+@import "./../../includes/mixins/mix-input-range/mix-input-range";
+
+
+@import "./../../includes/components/header/header";
+@import "./../../includes/components/main-menu/main-menu";
+@import "./../../includes/components/btn-mob/btn-mob";
+
+@import "./../../includes/components/banner/banner";
+
+@import "./../../includes/components/checkout/checkout";
+@import "./../../includes/components/steps/steps";
+@import "./../../includes/components/checkout/checkout-form";
+@import "./../../includes/components/fakeScroll/fakeScroll";
+
+
+@import "./../../includes/components/footer/footer";
+@import "./../../includes/components/pay-list/pay-list";
+@import "./../../includes/components/contact-links/contact-links";

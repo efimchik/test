@@ -1,0 +1,24 @@
+extends ./../../includes/templates/landing/landing
+block config
+    - let params = meta.main
+
+
+
+append fonts
+
+prepend styles
+
+append styles
+
+append headScripts
+
+
+block content
+    include ./../../includes/components/header/header
+    section.content
+        include ./../../includes/components/banner/banner
+        include ./../../includes/components/checkout/checkout
+    include ./../../includes/components/footer/footer
+
+
+append scripts

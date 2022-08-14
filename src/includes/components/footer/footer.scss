@@ -1,0 +1,40 @@
+.footer {
+    width: 100%;
+    line-height: 16px;
+    font-size: 13px;
+    color: $text-color-secondary;
+    opacity: 0;
+    background-color: $third-bg;
+    transition: opacity $transition-base;
+
+    &.animation {
+        opacity: 1;
+    }
+
+    &__column {
+        display: flex;
+        align-items: center;
+
+        @media(max-width: 768px) {
+            flex-direction: column;
+        }
+    }
+
+    .copy {
+        @media(max-width: 1200px) {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+    }
+
+    .center {
+        padding: 30px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media(max-width: 1200px) {
+            flex-direction: column;
+        }
+    }
+}

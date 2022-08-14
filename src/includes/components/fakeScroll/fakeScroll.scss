@@ -1,0 +1,49 @@
+.fakeScroll {
+    &__wrap {
+        overflow: hidden;
+        height: 100%;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__scope {
+        overflow:visible;
+    }
+
+    &__content {
+        height: 100%;
+        width: 100%;
+        padding: 0 18px 0 0;
+        position: relative;
+        overflow: auto;
+    }
+
+    &__track {
+        padding: 0;
+        width: 7px;
+        position: absolute;
+        right: 4px;
+        top: 2px;
+        bottom: 2px;
+        z-index: 1;
+        background: $third-bg;
+        border-radius: 4px;
+        cursor: default;
+        transition: .1s;
+    }
+
+    &__bar {
+        width: 100%;
+        position: relative;
+        z-index: 0;
+        background: $btn-third-bg;
+        border-radius: 4px;
+        transition: background 0.1s;
+        cursor: pointer;
+        transition: background $transition-base;
+
+        &:hover {
+            background: $border-color-second;
+        }
+    }
+}

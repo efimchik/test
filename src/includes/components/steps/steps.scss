@@ -1,0 +1,107 @@
+.steps {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    position: relative;
+
+    &__item {
+        min-width: 180px;
+        max-width: 210px;
+        flex: 1;
+        line-height: 19px;
+        font-size: 16px;
+        text-align: center;
+        position: relative;
+
+        @media(max-width: 1076px) {
+            &:before,
+            &:after {
+                display: none;
+            }
+        }
+
+        &:before,
+        &:after {
+            content: '';
+            width: 110px;
+            height: 6px;
+            position: absolute;
+            top: 47px;
+            opacity: 0;
+            background: url(./../img/dots.svg) repeat-x left top;
+            transition: opacity $transition-base ($transition-base * 2.5);
+        }
+
+        &:before {
+            left: -18px;
+        }
+
+        &:after {
+            right: -18px;
+        }
+
+        &:first-child {
+            &:before {
+                display: none;
+            }
+        }
+
+        &:last-child {
+            &:after {
+                display: none;
+            }
+        }
+
+        &.animation {
+            &:before,
+            &:after {
+                opacity: 1;
+            }
+
+            .steps__item {
+                &-icn {
+                    opacity: 1;
+                }
+
+                &-title {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+        }
+
+        &-icn {
+            margin: 0 auto 20px;
+            width: 100px;
+            height: 100px;
+            flex-shrink: 0;
+            position: relative;
+            z-index: 1;
+            opacity: 0;
+            background-color: $btn-secondary-bg;
+            border: 5px solid $border-color-second;
+            border-radius: 50%;
+            box-sizing: border-box;
+            transition: opacity $transition-base;
+
+            img {
+                width: 68.75%;
+                height: 68.75%;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        &-title {
+            opacity: 0;
+            transform: translateY(100%);
+            transition:
+                transform $transition-base ($transition-base * 2),
+                opacity $transition-base  ($transition-base * 2);
+        }
+    }
+}
